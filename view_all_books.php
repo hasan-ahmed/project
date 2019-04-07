@@ -1,6 +1,7 @@
 <?php
     if (isset($_POST['submit'])) {
         require "config.php";
+        require "common.php";
 
         $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
