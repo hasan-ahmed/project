@@ -2,7 +2,7 @@
 
 <ul>
     <li>
-        <a href="">View All Books</a>
+        <a href="view_all_books.php">View All Books</a>
     </li>
     <li>
         <a href="">View all back ordered books</a>
