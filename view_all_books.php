@@ -1,5 +1,4 @@
 <?php
-    if (isset($_POST['submit'])) {
         require "config.php";
         require "common.php";
 
@@ -14,7 +13,6 @@
             }
         }
         $mysqli->close();
-    }
 
 ?>
 <?php include "templates/header.php"; ?>
@@ -43,7 +41,7 @@
         <tbody>
             <?php while($row = $result->fetch_assoc()) ?>
             <tr>
-                <td><?php echo escape($row["ISBN"]) ?></td>
+                <td><?php echo $row["ISBN"] ?></td>
                 <td><?php echo escape($row["title"]) ?></td>
                 <td><?php echo escape($row["author"]) ?></td>
                 <td><?php echo escape($row["edition"]) ?></td>
