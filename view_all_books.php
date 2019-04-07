@@ -12,8 +12,6 @@
                 echo "ISBN: ".$row["ISBN"]."<br>";
             }
         }
-        $mysqli->close();
-
 ?>
 <?php include "templates/header.php"; ?>
 
