@@ -4,7 +4,7 @@ require "common.php";
 
 $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
-$queryText = "SELECT * FROM Books WHERE quatityOnHand = 0;";
+$queryText = "SELECT * FROM Books WHERE quantityOnHand = 0;";
 $result = $mysqli -> query($queryText);
 
 ?>
@@ -45,6 +45,7 @@ if($result->num_rows > 0){
 else
 {
     ?>
+    </table>
     <tr>
         <th colspan="2">No back ordered books have been found in your bookstore!</th>
     </tr>
