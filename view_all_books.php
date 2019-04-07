@@ -34,10 +34,13 @@
                 <td><?php echo $row['price']; ?></td>
                 <td><?php echo $row['quantityOnHand']; ?></td>
                 <td><?php echo $row['quantitySold']; ?></td>
-                <td><?php echo $row['publisher ID']; ?></td>
+                <td><?php echo $row['publisherID']; ?></td>
             </tr>
             <?php
         }
+        ?>
+        </table>
+        <?php
     }
     else
     {
