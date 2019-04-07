@@ -11,7 +11,7 @@
 <?php include "templates/header.php"; ?>
 
     <h1 align="center">View All Book Details</h1>
-    <table>
+    <table align="center">
     <tr>
         <th>ISBN</th>
         <th>Title</th>
