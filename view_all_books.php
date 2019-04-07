@@ -52,5 +52,5 @@
     }
     ?>
 
-<a href="index.php" align="center">Back to home</a>
+<a href="index.php">Back to home</a>
 <?php include "templates/footer.php"; ?>
