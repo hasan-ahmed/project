@@ -17,12 +17,9 @@
 ?>
 <?php include "templates/header.php"; ?>
 
-    <h2>View All Books</h2>
-
-    <form method="post">
-        <input type="submit" name="submit" value="Click to Load All Books">
-    </form>
-
+<?php
+    if ($result && $result->num_rows > 0) {
+?>
     <h2>Results</h2>
 
     <table>
@@ -39,19 +36,19 @@
             </tr>
         </thead>
         <tbody>
-            <?php while($row = mysqli_fetch_array($result)) ?>
+            <?php while($row = $row->fetch_assoc()) ?>
             <tr>
-                <td><?php echo $row["ISBN"] ?></td>
-                <td><?php echo escape($row["title"]) ?></td>
-                <td><?php echo escape($row["author"]) ?></td>
-                <td><?php echo escape($row["edition"]) ?></td>
-                <td><?php echo escape($row["price"]) ?></td>
-                <td><?php echo escape($row["quantityOnHand"]) ?></td>
-                <td><?php echo escape($row["quantitySold"]) ?></td>
-                <td><?php echo escape($row["publisherID"]) ?></td>
+                <td><?php echo $row["ISBN"]; ?></td>
+                <td><?php echo escape($row["title"]); ?></td>
+                <td><?php echo escape($row["author"]); ?></td>
+                <td><?php echo escape($row["edition"]); ?></td>
+                <td><?php echo escape($row["price"]); ?></td>
+                <td><?php echo escape($row["quantityOnHand"]); ?></td>
+                <td><?php echo escape($row["quantitySold"]); ?></td>
+                <td><?php echo escape($row["publisherID"]); ?></td>
             </tr>
         </tbody>
     </table>
-
+    <?php } ?>
 <a href="index.php">Back to home</a>
 <?php include "templates/footer.php"; ?>
