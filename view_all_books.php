@@ -6,7 +6,6 @@
 
         $queryText = "SELECT * FROM Books;";
         $result = $mysqli -> query($queryText);
-        $mysqli->close();
 
 ?>
 <?php include "templates/header.php"; ?>
