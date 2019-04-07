@@ -39,7 +39,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php while($row = $result->fetch_assoc()) ?>
+            <?php while($row = mysqli_fetch_array($result)) ?>
             <tr>
                 <td><?php echo $row["ISBN"] ?></td>
                 <td><?php echo escape($row["title"]) ?></td>
