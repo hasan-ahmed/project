@@ -6,12 +6,6 @@
 
         $queryText = "SELECT * FROM Books;";
         $result = $mysqli -> query($queryText);
-
-        if ($result->num_rows > 0) {
-            while($row = $result->fetch_assoc()) {
-                echo "ISBN: ".$row["ISBN"]."<br>";
-            }
-        }
 ?>
 <?php include "templates/header.php"; ?>
 
