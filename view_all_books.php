@@ -36,7 +36,7 @@
             </tr>
         </thead>
         <tbody>
-            <?php while($row = $row->fetch_assoc()) ?>
+            <?php while($row = $result->fetch_assoc()) ?>
             <tr>
                 <td><?php echo $row["ISBN"]; ?></td>
                 <td><?php echo escape($row["title"]); ?></td>
