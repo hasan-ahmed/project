@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     require "common.php";
 
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
-    $queryText = "SELECT * FROM Books WHERE author = 'Amita Trasi';";
+    $queryText = "SELECT * FROM Books WHERE Books.author = 'Amita Trasi';";
     echo $queryText;
     $result = $mysqli -> query($queryText);
     $row = $result -> fetch_assoc();
