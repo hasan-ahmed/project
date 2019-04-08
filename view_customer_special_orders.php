@@ -6,7 +6,7 @@ if (isset($_POST['submit'])) {
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
     $customerid = "'".$_POST['customerid']."'";
-    $queryText = "SELECT o.orderID, o.date, o.quantity, o.SSN, bs.ISBN, b.title, b.author, b.edition, b.price
+    $queryText = "SELECT o.orderID, o.date, o.quantity, o.SSN, bs.ISBN, b.title, b.author, b.edition,  o.quantity * b.price as Total
                   FROM bqc353_4.Orders o
                   INNER JOIN bqc353_4.order_books ob
                   ON ob.orderId =o.orderId
@@ -38,9 +38,14 @@ if (isset($_POST['submit'])) {
     <table align="center">
     <tr>
         <th>Order ID</th>
-        <th>QUantity Ordered</th>
+        <th>Quantity Ordered</th>
         <th>Date</th>
         <th>SSN</th>
+        <th>ISBN</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Edition</th>
+        <th>Total</th>
     </tr>
 <?php
 if($result->num_rows > 0){
@@ -51,6 +56,11 @@ if($result->num_rows > 0){
             <td><?php echo $row['quantity']; ?></td>
             <td><?php echo $row['date']; ?></td>
             <td><?php echo $row['SSN']; ?></td>
+            <td><?php echo $row['ISBN']; ?></td>
+            <td><?php echo $row['title']; ?></td>
+            <td><?php echo $row['author']; ?></td>
+            <td><?php echo $row['edition']; ?></td>
+            <td><?php echo $row['Total']; ?></td>
         </tr>
         <?php
     }
