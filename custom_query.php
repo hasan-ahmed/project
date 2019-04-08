@@ -24,17 +24,6 @@ if (isset($_POST['submit'])) {
     </form>
 
     <table align="center">
-    <tr>
-        <th>Order ID</th>
-        <th>Quantity Ordered</th>
-        <th>Date</th>
-        <th>SSN</th>
-        <th>ISBN</th>
-        <th>Title</th>
-        <th>Author</th>
-        <th>Edition</th>
-        <th>Total</th>
-    </tr>
 <?php
 if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
