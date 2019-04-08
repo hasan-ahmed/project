@@ -19,9 +19,7 @@ if (isset($_POST['submit'])) {
 
     <form method="post">
         <label for="customquery">Custom Query</label>
-        <?php
-        echo "<input type=text name=customquery id=customquery value='".htmlspecialchars($chaine, ENT_QUOTES)."'>";
-        ?>
+        <input type=text name=customquery id=customquery>
         <input type="submit" name="submit" value="submit">
     </form>
 
