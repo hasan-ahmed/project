@@ -5,8 +5,8 @@
 
         $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
-        $customername = "'".$_POST['customername']."'";
-        $queryText = "SELECT * FROM Sales WHERE customerID in (SELECT customerID from Customers WHERE name = ".$customername.");";
+        $customerid = "'".$_POST['customerid']."'";
+        $queryText = "SELECT * FROM Sales WHERE customerID = ".$customerid.");";
 
         $result = $mysqli -> query($queryText);
     }
@@ -20,8 +20,8 @@
 <h2> View purchases for a given customer </h2>
 
 <form method="post">
-    <label for="customername">Customer Name</label>
-    <input type="text" name="customername" id="customername">
+    <label for="customername">Customer ID</label>
+    <input type="text" name="customerid" id="customerid">
     <input type="submit" name="submit" value="submit">
 </form>
 
