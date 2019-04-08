@@ -7,6 +7,11 @@ if (isset($_POST['submit'])) {
     $queryText = $_POST['customquery'];
 
     $result = $mysqli -> query($queryText);
+    if ($result->num_rows > 0){
+        while($result->fetch_assoc()){
+            echo $row;
+        }
+    }
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
 }

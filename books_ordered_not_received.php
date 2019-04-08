@@ -55,7 +55,7 @@ else
 {
     ?>
     <tr>
-        <th colspan="2">No Books have been found in your bookstore!</th>
+        <th colspan="2">No matching books have ben found!</th>
     </tr>
     </table>
     <?php
