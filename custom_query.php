@@ -30,7 +30,7 @@ if (isset($_POST['submit'])) {
         <?php
         for ($i =0; $i < sizeof($column_names); $i++) {
             ?>
-            <th><?php echo $column_names[i];?></th>
+            <th><?php echo $column_names[$i];?></th>
             <?php
         }
             ?>
