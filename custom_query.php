@@ -6,8 +6,7 @@ if (isset($_POST['submit'])) {
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
     $queryText = $_POST['customquery'];
 
-    $queryTextEscaped = str_replace('\'', '\\\'', $queryText);
-    $result = $mysqli -> query($queryTextEscaped);
+    $result = $mysqli -> query($queryText);
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
 }
@@ -22,7 +21,9 @@ if (isset($_POST['submit'])) {
 
     <form method="post">
         <label for="customquery">Custom Query</label>
-        <input type="text" name="customquery" id="customquery">
+        <?php
+        echo "<input type=text name=customquery id=customquery value='".htmlspecialchars($chaine, ENT_QUOTES)."'>";
+        ?>
         <input type="submit" name="submit" value="submit">
     </form>
 
