@@ -6,8 +6,8 @@ if (isset($_POST['submit'])) {
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
     $queryText = $_POST['customquery'];
     echo $queryText;
+    echo sizeof(mysqli_fetch_array($result));
     $result = $mysqli -> query($queryText);
-    echo sizeof($result);
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
 }
