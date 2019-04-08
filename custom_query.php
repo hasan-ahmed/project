@@ -39,7 +39,7 @@ if($result->num_rows > 0){
             ?>
     </tr>
 <?php
-    while($row = $result->fetch_assoc()){
+    while($row = mysqli_fetch_array($result)){
         ?>
         <tr>
             <?php
