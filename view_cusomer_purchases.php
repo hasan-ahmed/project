@@ -54,10 +54,10 @@
     else
     {
         ?>
-        </table>
         <tr>
             <th colspan="2">No Books have been found in your bookstore!</th>
         </tr>
+        </table>
         <?php
     }
     ?>

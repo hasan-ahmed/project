@@ -45,10 +45,10 @@ if($result->num_rows > 0){
 else
 {
     ?>
-    </table>
     <tr>
         <th colspan="2">No back ordered books have been found in your bookstore!</th>
     </tr>
+    </table>
     <?php
 }
 ?>
