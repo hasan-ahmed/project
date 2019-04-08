@@ -6,7 +6,8 @@ if (isset($_POST['submit'])) {
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
     $queryText = $_POST['customquery'];
 
-    $result = $mysqli -> query($queryText);
+    $queryTextEscaped = str_replace('\'', '\\\'', $queryText);
+    $result = $mysqli -> query($queryTextEscaped);
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
 }
