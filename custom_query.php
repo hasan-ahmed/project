@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     require "common.php";
 
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
-    $queryText = "SELECT * FROM Books WHERE Books.author = 'Amita Trasi';";
+    $queryText = "SELECT * FROM bqc353_4.Books WHERE author = 'Amita Trasi';";
     echo $queryText;
     $result = $mysqli -> query($queryText);
     $row = $result -> fetch_assoc();
@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
 
 
 
-    <h2> View special orders for a given customer </h2>
+    <h2> Custom Query </h2>
 
     <form method="post">
         <label for="customquery">Custom Query</label>
