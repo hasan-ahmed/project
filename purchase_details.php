@@ -4,7 +4,7 @@ require "common.php";
 
 $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
-$queryText = "SELECT Customers.name, sum(Sales.quantity * Books.price) as ‘total’ 
+$queryText = "SELECT Customers.name, sum(Sales.quantity * Books.price) as 'total' 
               FROM Customers
               INNER JOIN Sales
               ON Customers.customerID = Sales.customerID
