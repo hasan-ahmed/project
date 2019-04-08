@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
 
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
-    $emloyeename = "'".$_POST['employeessn']."'";
+    $employeessn = "'".$_POST['employeessn']."'";
     $date = "'".$_POST['date']."'";
     $queryText = "SELECT * FROM Sales WHERE date = ".$date." AND SSN = ".$employeessn.");";
 
@@ -21,7 +21,7 @@ if (isset($_POST['submit'])) {
     <h2> View sales made my given employee on given date </h2>
 
     <form method="post">
-        <label for="employeename">Employee SSN</label>
+        <label for="employeessn">Employee SSN</label>
         <input type="text" name="employeessn" id="employeessn">
         <label for="date">Sale Date</label>
         <input type="date" name="date" id="date" min="2019-01-01" value="2019-04-01">
