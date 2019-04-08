@@ -8,7 +8,7 @@
         <a href="view_back_order_books.php">B.</a> View all back ordered books
     </li>
     <li>
-        <a href="">C.</a> View special orders by given customer
+        <a href="view_customer_special_orders.php">C.</a> View special orders by given customer
     </li>
     <li>
         <a href="view_cusomer_purchases.php">D.</a> View all purchases made by given customer
