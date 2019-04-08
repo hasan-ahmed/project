@@ -26,6 +26,8 @@ $result = $mysqli -> query($queryText);
         <th>Quantity On Hand</th>
         <th>Quantity Sold</th>
         <th>Publisher ID</th>
+        <th>Quantity Ordered</th>
+        <th>Date Ordered</th>
     </tr>
 <?php
 if($result->num_rows > 0){
@@ -36,10 +38,12 @@ if($result->num_rows > 0){
             <td><?php echo $row['title']; ?></td>
             <td><?php echo $row['author']; ?></td>
             <td><?php echo $row['edition']; ?></td>
-            <td><?php echo $row['price']; ?></td>
+            <td>$<?php echo $row['price']; ?></td>
             <td><?php echo $row['quantityOnHand']; ?></td>
             <td><?php echo $row['quantitySold']; ?></td>
             <td><?php echo $row['publisherID']; ?></td>
+            <td><?php echo $row['quantity']; ?></td>
+            <td><?php echo $row['date']; ?></td>
         </tr>
         <?php
     }
