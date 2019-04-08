@@ -10,7 +10,6 @@ if (isset($_POST['submit'])) {
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
 }
-
 ?>
 
 <?php require "templates/header.php"; ?>
@@ -27,15 +26,7 @@ if (isset($_POST['submit'])) {
 if($result->num_rows > 0){
 ?>
     <table align="center">
-    <tr>
-        <?php
-        for ($i =0; $i < sizeof($column_names); $i++) {
-            ?>
-            <th><?php echo $column_names[$i];?></th>
-            <?php
-        }
-            ?>
-    </tr>
+ß
 <?php
     while($row = mysqli_fetch_array($result)){
         ?>
