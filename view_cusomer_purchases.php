@@ -6,8 +6,10 @@
         $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
         $customername = $_POST['customername'];
+        $queryText = "SELECT * FROM Sales WHERE CustomerID in (SELECT customerID from Customers WHERE name = ".$customername." );";
+        echo $queryText;
 
-        echo $customername;
+        $result = $mysqli -> query($queryText);
     }
 
 ?>
@@ -52,6 +54,7 @@
     else
     {
         ?>
+        </table>
         <tr>
             <th colspan="2">No Books have been found in your bookstore!</th>
         </tr>
