@@ -7,7 +7,6 @@
 
         $customername = "'".$_POST['customername']."'";
         $queryText = "SELECT * FROM Sales WHERE customerID in (SELECT customerID from Customers WHERE name = ".$customername.");";
-        echo $queryText;
 
         $result = $mysqli -> query($queryText);
     }
@@ -55,7 +54,7 @@
     {
         ?>
         <tr>
-            <th colspan="5">No Books have been found in your bookstore!</th>
+            <th colspan="5">No sales matching the specified customer name have been found!</th>
         </tr>
         </table>
         <?php
