@@ -4,10 +4,9 @@ if (isset($_POST['submit'])) {
     require "common.php";
 
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
-    $queryText = $_POST['customquery'];
+    $queryText = "SELECT * FROM Books WHERE author = 'Amita Trasi';";
     echo $queryText;
     $result = $mysqli -> query($queryText);
-    echo sizeof(mysqli_fetch_array($result));
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
 }
