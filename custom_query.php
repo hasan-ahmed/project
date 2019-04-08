@@ -5,7 +5,7 @@ if (isset($_POST['submit'])) {
 
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
     $queryText = "".$_POST['customquery']."";
-
+    echo $queryText;
     $result = $mysqli -> query($queryText);
     $row = $result -> fetch_assoc();
     $column_names = array_keys($row);
@@ -14,8 +14,6 @@ if (isset($_POST['submit'])) {
 ?>
 
 <?php require "templates/header.php"; ?>
-
-
 
     <h2> Custom Query </h2>
 
