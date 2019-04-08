@@ -17,7 +17,7 @@
         <a href="view_sales_by_employee.php">View all sales made by a given employee on a specific date.</a>
     </li>
     <li>
-        <a href="">Get details of all purchases made. For each customer, return the total
+        <a href="purchase_details.php">Get details of all purchases made. For each customer, return the total
             amount paid for the books ordered since the beginning of the year.</a>
     </li>
     <li>

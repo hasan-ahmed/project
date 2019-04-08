@@ -57,7 +57,7 @@ else
 {
     ?>
     <tr>
-        <th colspan="5">No sales matching the specified customer name have been found!</th>
+        <th colspan="5">No sales made by this employee on given date!</th>
     </tr>
     </table>
     <?php
