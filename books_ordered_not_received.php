@@ -9,7 +9,7 @@ $queryText = "SELECT * FROM Books b
               ON ob.ISBN = b.ISBN
               INNER JOIN Orders o
               ON o.orderId = ob.orderID
-              WHERE b.ISBN NOT IN (SELECT ISBN FROM Shipments s WHERE s.date BETWEEN o.date AND NOW());";
+              WHERE b.ISBN NOT IN (SELECT ISBN FROM Shipments s WHERE s.date BETWEEN o.date AND DATE_ADD(o.date, INTERVAL 14 DAY));";
 $result = $mysqli -> query($queryText);
 
 ?>
