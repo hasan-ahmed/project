@@ -7,8 +7,6 @@ if (isset($_POST['submit'])) {
     $queryText = "".$_POST['customquery']."";
 
     $result = $mysqli -> query($queryText);
-    $row = $result -> fetch_assoc();
-    $column_names = array_keys($row);
 }
 ?>
 
@@ -26,7 +24,7 @@ if (isset($_POST['submit'])) {
 if($result->num_rows > 0){
 ?>
     <table align="center">
-ß
+
 <?php
     while($row = mysqli_fetch_array($result)){
         ?>
