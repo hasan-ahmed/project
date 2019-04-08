@@ -5,8 +5,8 @@
 
         $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
-        $customername = $_POST['customername'];
-        $queryText = "SELECT * FROM Sales WHERE customerID in (SELECT customerID from Customers WHERE name = ".$customername." );";
+        $customername = "'".$_POST['customername']."'";
+        $queryText = "SELECT * FROM Sales WHERE customerID in (SELECT customerID from Customers WHERE name = ".$customername."\' );";
         echo $queryText;
 
         $result = $mysqli -> query($queryText);
