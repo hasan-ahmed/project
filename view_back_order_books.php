@@ -4,7 +4,7 @@ require "common.php";
 
 $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
-$queryText = "SELECT * FROM Books WHERE BookID IN (Select BookID FROM order_books)";
+$queryText = "SELECT * FROM Books WHERE bookID IN (Select bookID FROM order_books)";
 $result = $mysqli -> query($queryText);
 
 ?>
