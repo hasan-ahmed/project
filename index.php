@@ -2,10 +2,10 @@
 
 <ul>
     <li>
-        <a href="view_all_books.php">A. View All Books</a>
+        <a href="view_all_books.php">A.</a> View All Books
     </li>
     <li>
-        <a href="view_back_order_books.php">B.</a View all back ordered books>
+        <a href="view_back_order_books.php">B.</a> View all back ordered books
     </li>
     <li>
         <a href="">C.</a> View special orders by given customer
