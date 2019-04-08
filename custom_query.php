@@ -25,6 +25,9 @@ if (isset($_POST['submit'])) {
         <input type="submit" name="submit" value="submit">
     </form>
 
+<?php
+if($result->num_rows > 0){
+?>
     <table align="center">
     <tr>
         <?php
@@ -36,7 +39,6 @@ if (isset($_POST['submit'])) {
             ?>
     </tr>
 <?php
-if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
         ?>
         <tr>
