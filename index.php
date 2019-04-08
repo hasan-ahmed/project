@@ -21,7 +21,7 @@
             amount paid for the books ordered since the beginning of the year.
     </li>
     <li>
-        <a href="">G.</a> List every book ordered but not received within the period set has passed.
+        <a href="books_ordered_not_received.php">G.</a> List every book ordered but not received within the period set has passed.
     </li>
 </ul>
 
