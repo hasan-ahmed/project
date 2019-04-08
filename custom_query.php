@@ -42,15 +42,13 @@ if($result->num_rows > 0){
     while($row = $result->fetch_assoc()){
         ?>
         <tr>
-            <td><?php echo $row['orderID']; ?></td>
-            <td><?php echo $row['quantity']; ?></td>
-            <td><?php echo $row['date']; ?></td>
-            <td><?php echo $row['SSN']; ?></td>
-            <td><?php echo $row['ISBN']; ?></td>
-            <td><?php echo $row['title']; ?></td>
-            <td><?php echo $row['author']; ?></td>
-            <td><?php echo $row['edition']; ?></td>
-            <td><?php echo $row['Total']; ?></td>
+            <?php
+            for ($i = 0; $i < sizeof($row); $i++) {
+                ?>
+                <td> <?php echo $row[$i]?></td>
+                <?php
+            }
+                ?>
         </tr>
         <?php
     }
