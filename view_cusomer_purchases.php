@@ -6,7 +6,7 @@
         $mysqli = new mysqli($hostname, $username, $password, $dbname);
 
         $customerid = "'".$_POST['customerid']."'";
-        $queryText = "SELECT * FROM Sales WHERE customerID = ".$customerid.");";
+        $queryText = "SELECT * FROM Sales WHERE customerID = ".$customerid.";";
 
         $result = $mysqli -> query($queryText);
     }
