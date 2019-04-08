@@ -19,7 +19,7 @@ $result = $mysqli -> query($queryText);
 ?>
 <?php include "templates/header.php"; ?>
 
-    <h1 align="center">View All Book Details</h1>
+    <h1 align="center">Purchase Details: Total $ spent YTD per customer</h1>
     <table align="center">
     <tr>
         <th>Customer Name</th>
