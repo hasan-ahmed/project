@@ -31,7 +31,7 @@ if($result->num_rows > 0){
         ?>
         <tr>
             <td><?php echo $row['name']; ?></td>
-            <td><?php echo $row['total']; ?></td>
+            <td>$<?php echo $row['total']; ?></td>
         </tr>
         <?php
     }
