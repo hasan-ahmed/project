@@ -9,6 +9,7 @@ if (isset($_POST['submit'])) {
     $date = "'".$_POST['date']."'";
     $queryText = "SELECT * FROM Sales WHERE date = ".$date." AND SSN = ".$employeessn.");";
 
+    echo $queryText;
     $result = $mysqli -> query($queryText);
 }
 
