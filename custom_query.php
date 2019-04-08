@@ -4,7 +4,7 @@ if (isset($_POST['submit'])) {
     require "common.php";
 
     $mysqli = new mysqli($hostname, $username, $password, $dbname);
-    $queryText = $_POST['customquery'];
+    $queryText = '"'.$_POST['customquery'].'"';
 
     $result = $mysqli -> query($queryText);
     $row = $result -> fetch_assoc();
