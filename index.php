@@ -24,7 +24,7 @@
         <a href="books_ordered_not_received.php">G.</a> List every book ordered but not received within the period set has passed.
     </li>
     <li>
-        <a href="">Custom query</a>
+        <a href="custom_query.php">Custom query</a>
     </li>
 </ul>
 
