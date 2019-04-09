@@ -8,7 +8,6 @@ if (isset($_POST['submit'])) {
 
     $result = $mysqli -> query($queryText);
     $row = $result -> fetch_assoc();
-    $column_names = array_keys($row);
 }
 ?>
 
@@ -25,7 +24,7 @@ if (isset($_POST['submit'])) {
 <?php
 if($result->num_rows > 0){
 ?>
-    <table align="center">
+    < align="center">
     <tr>
         <?php
         for ($i =0; $i < sizeof($column_names); $i++) {
@@ -35,6 +34,7 @@ if($result->num_rows > 0){
         }
             ?>
     </tr>
+    <tr>
 <?php
     for ($i = 0; $i < sizeof($row); $i++) {
         ?>
@@ -42,6 +42,9 @@ if($result->num_rows > 0){
 
         <?php
     }
+    ?>
+    </tr>
+    <?php
         while($row = mysqli_fetch_array($result)){
         ?>
         <tr>
